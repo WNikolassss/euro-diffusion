@@ -46,8 +46,8 @@ export class Country {
     };
 
     const isIntegerInBounds = (coordinate: number) => {
-      if (!Number.isInteger(coordinate)) return false;
       return (
+        Number.isInteger(coordinate) &&
         coordinate >= Country.MIN_COORDINATE &&
         coordinate <= Country.MAX_COORDINATE
       );
