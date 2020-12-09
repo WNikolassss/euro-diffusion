@@ -7,7 +7,7 @@ export class FileInput implements IInput {
 
   constructor(filename: string) {
     this.data = fs
-      .readFileSync(filename)
+      .readFileSync(filename, { encoding: 'utf-8' })
       .toString()
       .split('\n')
       .map((line) => line.replace('\r', ''));

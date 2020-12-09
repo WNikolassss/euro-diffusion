@@ -24,10 +24,10 @@ export class MapGrid {
   countries: Country[];
   countriesGrid = new GridDictionary();
 
-  minX: number;
-  minY: number;
-  maxX: number;
-  maxY: number;
+  minX: number = 0;
+  minY: number = 0;
+  maxX: number = 0;
+  maxY: number = 0;
 
   /**
    * Create a MapGrid
@@ -35,10 +35,6 @@ export class MapGrid {
    */
   constructor(countries: Country[]) {
     this.countries = countries;
-    this.minX = 0;
-    this.minY = 0;
-    this.maxX = 0;
-    this.maxY = 0;
 
     // find max/min coords
     countries.forEach((country) => {
